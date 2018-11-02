@@ -1,67 +1,7 @@
-(function (window, $) {
-	'use strict';
+/*!
+ * Start Bootstrap - Freelancer v5.0.0 (https://startbootstrap.com/template-overviews/freelancer)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
+ */
 
-	// Cache document for fast access.
-	var document = window.document;
-
-
-	function mainSlider() {
-		$('.bxslider').bxSlider({
-			pagerCustom: '#bx-pager',
-			mode: 'fade',
-			nextText: '',
-			prevText: ''
-		});
-	}
-
-	mainSlider();
-
-
-
-	var $links = $(".bx-wrapper .bx-controls-direction a, #bx-pager a");
-	$links.click(function(){
-	   $(".slider-caption").removeClass('animated fadeInLeft');
-	   $(".slider-caption").addClass('animated fadeInLeft');
-	});
-
-	$(".bx-controls").addClass('container');
-	$(".bx-next").addClass('fa fa-angle-right');
-	$(".bx-prev").addClass('fa fa-angle-left');
-
-
-	$('a.toggle-menu').click(function(){
-        $('.responsive .main-menu').toggle();
-        return false;
-    });
-
-    $('.responsive .main-menu a').click(function(){
-        $('.responsive .main-menu').hide();
-
-    });
-
-    $('.main-menu').singlePageNav();
-	
-//	var dt = window.atob('fCBEZXNpZ246IDxhIHJlbD0ibm9mb2xsb3ciIGhyZWY9Imh0dHA6Ly93d3cudGVtcGxhdGVtby5jb20vdG0tNDAxLXNwcmludCIgdGFyZ2V0PSJfcGFyZW50Ij5TcHJpbnQ8L2E+'); 		// decode the string
-//	var div = document.getElementById('copyright');
-
-//	div.innerHTML += dt;
-
-
-})(window, jQuery);
-
-var map = '';
-
-function initialize() {
-    var mapOptions = {
-      zoom: 14,
-      center: new google.maps.LatLng(37.769725, -122.462154)
-    };
-    map = new google.maps.Map(document.getElementById('map'),  mapOptions);
-}
-
-// load google map
-var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-        'callback=initialize';
-    document.body.appendChild(script);
+!function(t){"use strict";t('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var o=t(this.hash);if((o=o.length?o:t("[name="+this.hash.slice(1)+"]")).length)return t("html, body").animate({scrollTop:o.offset().top-70},1e3,"easeInOutExpo"),!1}}),t(document).scroll(function(){100<t(this).scrollTop()?t(".scroll-to-top").fadeIn():t(".scroll-to-top").fadeOut()}),t(".js-scroll-trigger").click(function(){t(".navbar-collapse").collapse("hide")}),t("body").scrollspy({target:"#mainNav",offset:80});var o=function(){100<t("#mainNav").offset().top?t("#mainNav").addClass("navbar-shrink"):t("#mainNav").removeClass("navbar-shrink")};o(),t(window).scroll(o),t(".portfolio-item").magnificPopup({type:"inline",preloader:!1,focus:"#username",modal:!0}),t(document).on("click",".portfolio-modal-dismiss",function(o){o.preventDefault(),t.magnificPopup.close()}),t(function(){t("body").on("input propertychange",".floating-label-form-group",function(o){t(this).toggleClass("floating-label-form-group-with-value",!!t(o.target).val())}).on("focus",".floating-label-form-group",function(){t(this).addClass("floating-label-form-group-with-focus")}).on("blur",".floating-label-form-group",function(){t(this).removeClass("floating-label-form-group-with-focus")})})}(jQuery);
